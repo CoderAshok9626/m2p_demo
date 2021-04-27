@@ -22,6 +22,7 @@ class Payment_Demo_Activator {
 			) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=latin1",
 			"CREATE TABLE IF NOT EXISTS ".$wpdb->prefix."payment_details (
 			  `payment_id` int(11) NOT NULL AUTO_INCREMENT,
+  			  `user_id` int(11) NOT NULL,
 			  `product_id` int(5) NOT NULL,
 			  `emi_id` varchar(5) DEFAULT NULL,
 			  `emi_amount` varchar(11) DEFAULT NULL,
