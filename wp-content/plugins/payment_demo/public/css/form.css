@@ -1,0 +1,374 @@
+.d-form {
+    position: relative;
+    color: #4b425e;
+    max-width: 550px;
+    margin: auto
+}
+
+.d-form.Form--inactive .fld-content {
+    opacity: .5;
+    cursor: not-allowed
+}
+
+.d-form.Form--inactive .fld-content .fld-el {
+    pointer-events: none
+}
+
+.d-form .fld {
+    position: relative;
+    display: block;
+    margin: 24px 0 -21px;
+    transition: .12s
+}
+
+.d-form .fld::after {
+    content: '';
+    display: table;
+    clear: both
+}
+
+.d-form .fld--small .fld-wrapper {
+    width: 55%
+}
+
+.d-form .fld .fld .fld-error,
+.d-form .fld .fld .fld-description {
+    display: none
+}
+
+.d-form .fld-wrapper {
+    position: relative;
+    color: #4b425e
+}
+
+.d-form .fld-wrapper .fld-el label {
+    line-height: 36px
+}
+
+.d-form .fld-addon {
+    position: absolute;
+    top: 0;
+    display: table;
+    height: 100%
+}
+
+.d-form .fld-addon>* {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.d-form .fld-addon>*>.fld-content {
+    margin: 0
+}
+
+.d-form .fld-error {
+    color: #f05050;
+    opacity: 0;
+    transition: .12s;
+    min-height: 20px
+}
+
+.d-form .fld-description {
+    transform: translateY(-21px);
+    transition: .12s;
+    overflow-wrap: break-word
+}
+
+.d-form .fld-error,
+.d-form .fld-description {
+    font-size: 12px;
+    margin: 4px 0;
+    line-height: 16px
+}
+
+.d-form .fld-el {
+    line-height: 16px;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 2px;
+    overflow: hidden;
+    font-size: 15px;
+    padding: 10px 15px;
+    outline: none;
+    color: inherit
+}
+
+.d-form .fld-el::placeholder {
+    color: rgba(0, 0, 0, .3)
+}
+
+.d-form .fld.has-error {
+    margin-bottom: 0
+}
+
+.d-form .fld.has-error .fld-el {
+    border-color: #f05050
+}
+
+.d-form .fld.has-error .fld-error {
+    opacity: 1
+}
+
+.d-form .fld.has-error .fld-error+.fld-description {
+    transform: translateY(0)
+}
+
+.d-form .fld--disabled .fld-el {
+    cursor: not-allowed
+}
+
+.d-form .fld:not(.fld--disabled) .fld-el:hover {
+    border-color: #c1c1c1
+}
+
+.d-form .fld:not(.fld--disabled) .fld-el:focus {
+    border-color: #2b9cf2
+}
+
+.d-form .fld--select select {
+    -webkit-appearance: none;
+    -webkit-border-radius: 2px;
+    -moz-appearance: none;
+    text-indent: .001px;
+    text-overflow: '';
+    cursor: pointer
+}
+
+.d-form .fld--select .fld-wrapper::before {
+    content: '';
+    position: absolute;
+    right: 12px;
+    margin-top: 15px;
+    width: 0;
+    height: 0;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    pointer-events: none;
+    z-index: 2
+}
+
+.d-form .fld--textarea .fld-wrapper {
+    height: auto;
+    font-size: 0
+}
+
+.d-form .fld--textarea textarea.fld-el {
+    padding: 8px 12px;
+    height: 32px;
+    min-height: 32px;
+    max-height: 230px;
+    line-height: 16px;
+    resize: vertical
+}
+
+.d-form .fld--textarea .fld-el--textarea-fake {
+    width: 100%;
+    height: 32px;
+    overflow: hidden;
+    padding: 0 16px 0 10px;
+    line-height: 20px;
+    font-size: 14px;
+    visibility: hidden;
+    position: absolute
+}
+
+.d-form .fld-label {
+    position: relative;
+    font-size: 15px;
+    line-height: 20px;
+    color: #4b425e;
+    word-break: break-word;
+    margin-top: 10px;margin-bottom: 10px;
+}
+
+.d-form .fld-label .text-optional {
+    font-size: 12px;
+    opacity: .7
+}
+
+.d-form .fld .symbol--red {
+    color: #f05050;
+    display: none
+}
+
+.d-form .fld--required .symbol--red {
+    display: inline-block
+}
+
+.d-form .fld--CheckBox {
+    font-size: 0
+}
+
+.d-form .fld--CheckBox .fld-wrapper {
+    min-width: unset;
+    max-width: unset
+}
+
+.d-form .fld--CheckBox .fld-el {
+    font-size: 0
+}
+
+.d-form .fld--CheckBox .CheckBox-mark {
+    margin: 0;
+    width: 18px;
+    height: 18px
+}
+
+.d-form .fld--CheckBox .CheckBox-mark::after {
+    margin: 4px 0 0 7px
+}
+
+.d-form .fld--counter .fld-label {
+    margin-bottom: 0
+}
+
+.d-form .fld--counter .fld-wrapper {
+    min-width: 96px;
+    max-width: 96px;
+    height: 24px
+}
+
+.d-form .fld--counter .fld-wrapper button {
+    position: absolute;
+    width: 28px;
+    height: 22px;
+    font-size: 20px;
+    background: 0 0;
+    padding: 0 0 3px 1px;
+    user-select: none;
+    outline: 0;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    top: 0;
+    line-height: 100%;
+    font-weight: 700
+}
+
+.d-form .fld--counter .fld-wrapper button:disabled,
+.d-form .fld--counter .fld-wrapper button[disabled] {
+    opacity: .3;
+    cursor: not-allowed
+}
+
+.d-form .fld--counter .fld-wrapper button:hover {
+    background: #f6f6f6
+}
+
+.d-form .fld--counter .fld-wrapper button:active {
+    background: #e3e3e3
+}
+
+.d-form .fld--counter .fld-wrapper button:nth-of-type(1) {
+    left: 0;
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+    border: none;
+    border-right: 1px solid #e2e2e2;
+    margin: 1px 0 0 1px
+}
+
+.d-form .fld--counter .fld-wrapper button:nth-of-type(2) {
+    right: 0;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    border: none;
+    border-left: 1px solid #e2e2e2;
+    margin: 1px 1px 0 0
+}
+
+.d-form .fld--counter .fld-wrapper .counter-value {
+    width: 100%;
+    padding: 0 32px;
+    display: block;
+    text-align: center;
+    background: #fff
+}
+
+.d-form .fld-el[type=number]::-webkit-inner-spin-button,
+.d-form .fld-el[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -moz-appearance: textfld;
+    margin: 0
+}
+
+.d-form .currency-symbol {
+    font-family: initial;
+    font-size: 20px;
+    margin-top: 2px
+}
+
+.d-button {
+    margin-top: 30px
+}
+
+.d-button button {
+    max-width: 360px
+}
+
+@media(max-width:1024px) {
+    .d-form .fld {
+        margin-top: 24px
+    }
+    .d-form .fld-label {
+        width: 100%;
+        margin-bottom: 4px;
+        text-align: left;
+        float: unset
+    }
+    .d-form .fld-label .text-optional {
+        margin-left: 4px;
+        display: inline-block
+    }
+    .d-form .fld-content {
+        margin-left: 0
+    }
+    .d-form .fld-wrapper {
+        height: 40px;
+        max-width: unset
+    }
+    .d-form .fld-wrapper div.fld-el {
+        line-height: 40px
+    }
+    .d-form .fld-wrapper .fld--CheckBox .fld-wrapper {
+        height: 40px;
+        line-height: 40px
+    }
+    .d-form .fld-wrapper .fld--CheckBox .CheckBox-mark {
+        width: 21px;
+        height: 21px
+    }
+    .d-form .fld-wrapper .fld--CheckBox .CheckBox-mark::after {
+        margin: 6px 0 0 8px
+    }
+    .d-form .fld--textarea textarea.fld-el {
+        height: 40px;
+        min-height: 40px;
+        line-height: 20px
+    }
+    .d-form .fld--select select {
+        -webkit-appearance: none;
+        -webkit-border-radius: 2px;
+        cursor: pointer
+    }
+    .d-form .fld--select .fld-wrapper::before {
+        margin-top: 18px
+    }
+    .d-form .fld--has-image img {
+        height: 38px
+    }
+    .d-form .fld--has-image>.fld-content>.fld-wrapper>.fld-el {
+        padding-left: 58px
+    }
+    .d-button {
+        text-align: center
+    }
+}
+
+.required {
+    color: #f05050
+}

@@ -1,0 +1,3 @@
+.form-table1 td{padding:5px;border: 1px solid;}
+.form-table1 tr td:nth-child(2) { background: #fff; }
+/*.form-table1 tr td:nth-child(1) { background: #f6f7f7; }*/
